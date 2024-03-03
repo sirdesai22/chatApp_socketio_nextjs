@@ -1,12 +1,12 @@
-const http = require("http");
-const { Server } = require("socket.io");
-const cors = require("cors");
+import { createServer } from "http";
+import { Server } from "socket.io";
+import cors from "cors";
 
-const httpServer = http.createServer();
+const httpServer = createServer();
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000", // Replace with your frontend URL
+    origin: "https://team-chat-omega.vercel.app/", // Replace with your frontend URL
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,
