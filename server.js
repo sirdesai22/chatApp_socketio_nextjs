@@ -6,7 +6,7 @@ const httpServer = createServer();
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://team-chat-omega.vercel.app/", // Replace with your frontend URL
+    origin: "http://localhost:3000", // Replace with your frontend URL
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,
